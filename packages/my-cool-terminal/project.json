@@ -1,0 +1,51 @@
+{
+  "sourceRoot": "packages/my-cool-terminal/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/my-cool-terminal",
+        "main": "packages/my-cool-terminal/src/main.ts",
+        "tsConfig": "packages/my-cool-terminal/tsconfig.app.json",
+        "assets": ["packages/my-cool-terminal/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "packages/my-cool-terminal/src/environments/environment.ts",
+              "with": "packages/my-cool-terminal/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "my-cool-terminal:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/my-cool-terminal/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/my-cool-terminal"],
+      "options": {
+        "jestConfig": "packages/my-cool-terminal/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
