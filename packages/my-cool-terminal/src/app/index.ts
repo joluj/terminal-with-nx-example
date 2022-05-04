@@ -1,1 +1,2 @@
-export * from './MyCoolClass';
+export * from './HelloCommand';
+export * from './UploadNftCommand';

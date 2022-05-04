@@ -47,7 +47,7 @@ declare namespace Vorpal {
     [key: string]: unknown;
   }
 
-  type Action = (args: Args, callback: () => void) => Promise<void>;
+  type Action = (args: Args, callback: () => void) => Promise<void> | void;
   type Cancel = () => void;
 
   class Command {
