@@ -6,7 +6,8 @@
     "nx": "nx",
     "build": "nx build --configuration=production",
     "lint": "nx lint",
-    "test": "nx test"
+    "test": "nx test",
+    "serve": "nx serve"
   },
   "private": true,
   "dependencies": {
