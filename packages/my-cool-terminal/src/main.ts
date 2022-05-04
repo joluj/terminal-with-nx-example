@@ -1,5 +1,5 @@
-import { MyCoolClass } from "./app";
-import { environment } from "./environments/environment";
+import { MyCoolClass } from './app';
+import { environment } from './environments/environment';
 
 console.log('Hello World! :D');
 

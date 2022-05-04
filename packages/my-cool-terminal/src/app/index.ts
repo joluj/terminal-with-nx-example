@@ -1,2 +1,1 @@
-
-export * from "./MyCoolClass";
+export * from './MyCoolClass';
