@@ -10,6 +10,8 @@ yarn nx g @nrwl/node:application my-cool-terminal
 
 ```
 
-Development: `yarn nx serve`
+Development: `yarn serve`
 
-Build: `yarn nx build --configuration=production`
+Build: `yarn build`
+
+Bonus: Automatically restarting changed tests: `yarn test --watch`
