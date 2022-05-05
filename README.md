@@ -1,5 +1,8 @@
-```
+# Nx Example App
 
+Just some terminal app setup I made together with @schlingling.
+
+```
 yarn create nx-workspace --package-manager=yarn
 # ts auswählen
 # warten
